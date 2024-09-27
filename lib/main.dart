@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shaghaf_room/feature/home/presentation/views/register.dart';
+import 'package:shaghaf_room/feature/authenticator/presentation/views/register.dart';
 
 void main() {
   runApp(const MyApp());
