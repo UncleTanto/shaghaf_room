@@ -1,3 +1,3 @@
-class Assets {
-  String logo = "lib/core/assets/logo_shagaf.png";
+abstract class Assets {
+   static String logo = "lib/core/assets/logo_shagaf.png";
 }

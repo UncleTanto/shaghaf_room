@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shaghaf_room/feature/home/presentation/views/widgets/textFormTempl.dart';
 
+//this class is still under implementation 
+// I just added some code and one widget textFormImpli
 class Register extends StatelessWidget {
   const Register({super.key});
 
@@ -10,14 +12,11 @@ class Register extends StatelessWidget {
       child: Scaffold(
         
         body: Column(
-          
-          //mainAxisAlignment: MainAxisAlignment.spaceAround,
-      
           children: [
-            SizedBox(height: 50,),
-            Image(
+            const SizedBox(height: 50,),
+            const Image(
                 height: 200,
-                // width: double.infinity,
+                width: double.infinity,
                 image: AssetImage('lib/core/assets/logo_shagaf.png')),
             Padding(
               padding: const EdgeInsets.all(20.0),
@@ -27,29 +26,31 @@ class Register extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                   color: Color(0xFFFCE9BD)),
                 
-                margin: EdgeInsets.all(20),
-                padding: EdgeInsets.all(15),
-                child: Column(
+               margin: const EdgeInsets.all(20),
+               padding: const EdgeInsets.all(15),
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                     Text(
                       "Phone Number",
                       style: TextStyle(fontSize: 20,),
                     ),
-                    TextFormTempl(textInside: "Enter your Phone number", 
+                    //a widget TextFormTempl will be for all text fields
+                    //we can pass text and icon
+                     TextFormTempl(textInside: "Enter your Phone number", 
                     iconInside: Icons.phone_in_talk_outlined),
-                    SizedBox(height: 20,),
-                    Text(
+                     SizedBox(height: 20,),
+                     Text(
                       "Name",
                       style: TextStyle(fontSize: 20,),
                     ),
+                    //a widget TextFormTempl will be for all text fields
                     TextFormTempl(textInside: "Enter your Name", 
                     iconInside: Icons.perm_identity_outlined),
                   ],
                 ),
               ),
             ),
-            
           ],
         ),
       ),
