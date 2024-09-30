@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-const kPrimaryColor = Color(0xff100B20);
-const kButtonColor = Color(0xffEF8262);
-const kTransitionDuration  = Duration(microseconds: 250,);
-const KGTSectra = 'GTSectra';
+const kPrimaryGreen = Color(0xff20473E);
+const kPrimaryYellow = Color(0xffF04C29);
+const kPrimaryOrange = Color(0xffFFCC0A);
+const splashscreenimg = "lib/core/assets/scbg.png";
+const logo = "lib/core/assets/logo_shagaf.png";
