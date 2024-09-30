@@ -7,8 +7,8 @@ import 'package:shaghaf_room/feature/onboarding/presentation/view/widget/roundbu
 import '../../../../core/utils/app_router.dart';
 import '../../../../core/utils/style.dart';
 
-class onging extends StatelessWidget {
-  const onging({super.key});
+class onging2 extends StatelessWidget {
+  const onging2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,28 +31,29 @@ class onging extends StatelessWidget {
               alignment: Alignment.center,
               margin: EdgeInsets.only(left: 20,right: 20,bottom: 24),
               child:Image.asset(
-                ongoing1,
+                ongoing2,
                 fit: BoxFit.fill,
 
               ),
             ),
-            Text("Your favorite place to work",style: Styles.comfortaa20semi.copyWith(color: Colors.white),),
+            Text("Delightful open air",style: Styles.comfortaa20semi.copyWith(color: Colors.white),),
             Container(
               width: double.infinity,
               margin: EdgeInsets.all(25),
               alignment: Alignment.center,
-              child: Text("In Shaghaf Co-working space,"
-                  "we provide a place that makes you more productive,"
-                  " enjoyable and comfortable"
-                  " A place made up of different parts"
+              child: Text("You can choose a game to play from the many games we have,"
+                  " sit at a comfortable base,"
+                  "or take pictures in the different places "
+                  "that have been specially made to take "
+                  "beautiful pictures."
                 ,style: Styles.comfortaa16.copyWith(color:kPrimaryYellow),),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                DotWidget(color: kPrimaryOrange),
-                SizedBox(width: 9,),
                 DotWidget(color: kPrimaryOrange.withAlpha(128)),
+                SizedBox(width: 9,),
+                DotWidget(color: kPrimaryOrange),
                 SizedBox(width: 9,),
                 DotWidget(color: kPrimaryOrange.withAlpha(128)),
               ],
@@ -60,7 +61,8 @@ class onging extends StatelessWidget {
             Container(
               margin: EdgeInsets.all(25),
                 child: RoundButtonWithIcon(icon: Icons.navigate_next, color: Colors.black12, onPressed: (){
-                  GoRouter.of(context).pushReplacement(AppRouter.kongiung2);
+                  GoRouter.of(context).pushReplacement(AppRouter.kongiung3);
+
                 }))
           ],
         ),
