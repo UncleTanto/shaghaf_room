@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shaghaf_room/core/utils/assets.dart';
@@ -5,6 +6,7 @@ import 'package:shaghaf_room/core/utils/constants.dart';
 import 'package:shaghaf_room/core/utils/style.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/ButtonTempl.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/textFormTempl.dart';
+
 
 //this class is still under implementation
 // I just added some code and one widget textFormImpli
@@ -83,9 +85,44 @@ class Register extends StatelessWidget {
                         iconInside: Icons.lock_outline_rounded,
                         showPassword: true),
 
-                    
                     //instead of sized box I have added padding inside button
-                   ButtonTempl(text: "Sign UP")
+                    const ButtonTempl(text: "Sign UP"),
+                    //  Row(
+                    //     mainAxisAlignment: MainAxisAlignment.center,
+                    //   children: [
+                    //     Text("Already have an account? "),
+                    //     InkWell(child: Text("Log in")),
+
+                    //   ],
+                    //  ),
+
+                    Center(
+                      child: RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'Already have an account? ',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            TextSpan(
+                              text: 'Sign UP ',
+                              style: TextStyle(
+                                  color: Colors.blue,
+                                  decoration: TextDecoration.underline),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () async {
+                                  const url = 'https://your-url.com';
+                                  // if (await canLaunch(url)) {
+                                  //   await launch(url);
+                                  // } else {
+                                  //   throw 'Could not launch $url';
+                                  // }
+                                },
+                            ),
+                          ],
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),
