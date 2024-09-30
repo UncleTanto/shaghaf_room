@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:shaghaf_room/core/utils/assets.dart';
+import 'package:shaghaf_room/core/utils/constants.dart';
+import 'package:shaghaf_room/core/utils/style.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/textFormTempl.dart';
 
 //this class is still under implementation 
@@ -14,10 +18,10 @@ class Register extends StatelessWidget {
         body: Column(
           children: [
             const SizedBox(height: 50,),
-            const Image(
+             const Image(
                 height: 200,
                 width: double.infinity,
-                image: AssetImage('lib/core/assets/logo_shagaf.png')),
+                image: AssetImage(logo)),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
@@ -26,27 +30,66 @@ class Register extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                   color: Color(0xFFFCE9BD)),
                 
-               margin: const EdgeInsets.all(20),
+               margin: const EdgeInsets.all(5),
                padding: const EdgeInsets.all(15),
-                child: const Column(
+                child:  Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                      Text(
                       "Phone Number",
-                      style: TextStyle(fontSize: 20,),
+                      style: Styles.comfortaa14,
                     ),
                     //a widget TextFormTempl will be for all text fields
                     //we can pass text and icon
-                     TextFormTempl(textInside: "Enter your Phone number", 
-                    iconInside: Icons.phone_in_talk_outlined),
-                     SizedBox(height: 20,),
-                     Text(
+                     const TextFormTempl(textInside: "Enter your Phone number", 
+                    iconInside: Icons.phone_in_talk_outlined,showPassword: false,),
+                     const SizedBox(height: 10,),
+                     const Text(
                       "Name",
                       style: TextStyle(fontSize: 20,),
                     ),
                     //a widget TextFormTempl will be for all text fields
-                    TextFormTempl(textInside: "Enter your Name", 
-                    iconInside: Icons.perm_identity_outlined),
+                    const TextFormTempl(textInside: "Enter your Name", 
+                    iconInside: Icons.perm_identity_outlined,showPassword: false,),
+                    const SizedBox(height: 10,),
+                     const Text(
+                      "Password",
+                      style: TextStyle(fontSize: 20,),
+                    ),
+                    //a widget TextFormTempl will be for all text fields
+                    const TextFormTempl(textInside: "Enter your Password", 
+                    iconInside: Icons.lock_outline_rounded,showPassword: true,),
+
+                    const SizedBox(height: 10,),
+                     const Text(
+                      "Confirm Password",
+                      style: TextStyle(fontSize: 20,),
+                    ),
+                    const TextFormTempl(textInside: "Confirm Password", iconInside: Icons.lock_outline_rounded, showPassword: true),
+                  
+                  //FloatingActionButton(onPressed: onPressed)
+
+                  const SizedBox(height: 10,),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      
+                                    onPressed: () {
+                    //print('Rounded Elevated Button Pressed');
+                                    },
+                                    style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF20473E),
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      
+                    ),
+                                    ),
+                                    child: Text('Sign UP'),
+                                  ),
+                  ),
+
+
                   ],
                 ),
               ),
