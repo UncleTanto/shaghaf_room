@@ -14,7 +14,7 @@ class Splashscreen extends StatelessWidget {
       body: Center(
         child: Image.asset(
           splashscreenimg,
-          fit: BoxFit.cover,
+          fit: BoxFit.fill,
 
         ),
       ),
