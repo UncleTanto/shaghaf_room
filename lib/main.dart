@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/register.dart';
+import 'package:shaghaf_room/feature/splashscreen/presentation/view/splashscreen.dart';
 
 import 'core/utils/app_router.dart';
 import 'feature/splashscreen/presentation/view/splashscreen.dart';

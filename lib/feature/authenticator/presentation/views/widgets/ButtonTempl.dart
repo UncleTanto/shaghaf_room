@@ -22,7 +22,7 @@ class ButtonTempl extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
           ),
-          child: Text('$text',style: Styles.comfortaa17,),
+          child: Text(text,style: Styles.comfortaa17,),
         ),
       ),
     );
