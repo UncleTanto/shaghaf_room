@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shaghaf_room/core/utils/style.dart';
 
 class RoundButtonWithIcon extends StatelessWidget {
   final IconData icon;
@@ -18,11 +20,11 @@ class RoundButtonWithIcon extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         shape: const CircleBorder(),
         backgroundColor: color,
-        padding: const EdgeInsets.all(20),
+        // padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h),
       ),
       child: Icon(
         icon,
-        size: 50,
+        size: 20.sp,
         color: Colors.white, // Adjust the icon color as needed
       ),
     );

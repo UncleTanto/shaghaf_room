@@ -12,6 +12,7 @@ class Splashscreen extends StatelessWidget {
     navigateToHome(context);
     return SafeArea(
       child: Scaffold(
+        backgroundColor: kPrimaryGreen,
         body: Center(
           child: Container(
             width: double.infinity,
@@ -29,8 +30,7 @@ class Splashscreen extends StatelessWidget {
 }
 
 void navigateToHome(BuildContext context) {
-  Future.delayed(
-    const Duration(seconds: 4),
+  Future.delayed(const Duration(seconds: 4),
         () {
       GoRouter.of(context).pushReplacement(AppRouter.kongiung);
     },
