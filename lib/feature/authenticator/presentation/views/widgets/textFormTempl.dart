@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextFormTempl extends StatelessWidget {
    const TextFormTempl({super.key,required this.textInside, required this.iconInside,required this.showPassword});
@@ -8,8 +9,9 @@ class TextFormTempl extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5),
+    return Container(
+      height: 36.h,
+      width: 323.w,
       child: TextFormField(
         obscureText: showPassword,
         decoration: InputDecoration(
@@ -21,6 +23,7 @@ class TextFormTempl extends StatelessWidget {
           hintText: textInside,
           iconColor: Colors.black,
           hintStyle: const TextStyle(color: Colors.grey),
+          //contentPadding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 10.0), 
           contentPadding: const EdgeInsets.symmetric(vertical: 5), // Adjust height
         ),
       ),

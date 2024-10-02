@@ -1,11 +1,11 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:shaghaf_room/core/utils/assets.dart';
 import 'package:shaghaf_room/core/utils/constants.dart';
 import 'package:shaghaf_room/core/utils/style.dart';
+import 'package:shaghaf_room/feature/authenticator/presentation/views/login.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/ButtonTempl.dart';
+import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/hyperlinkTempl.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/textFormTempl.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 //this class is still under implementation
@@ -19,14 +19,18 @@ class Register extends StatelessWidget {
       child: Scaffold(
         body: Column(
           children: [
-            const SizedBox(
-              height: 50,
-            ),
-            const Image(
-                height: 200, width: double.infinity, image: AssetImage(logo)),
+            
+               Padding(
+            padding:
+                EdgeInsets.only(top: 76.h, left: 125.w, right: 125.w, bottom: 32.h),
+            child: Image(height: 235.h, width: 140.w, image: AssetImage(logo)),
+          ),
+          
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(10.0),
               child: Container(
+                height: 436.h,
+                width: 342.w,
                 decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(20)),
                     color: Color(0xFFFCE9BD)),
@@ -85,44 +89,20 @@ class Register extends StatelessWidget {
                         iconInside: Icons.lock_outline_rounded,
                         showPassword: true),
 
+                      const SizedBox(
+                      height: 5,
+                    ),
                     //instead of sized box I have added padding inside button
                     const ButtonTempl(text: "Sign UP"),
-                    //  Row(
-                    //     mainAxisAlignment: MainAxisAlignment.center,
-                    //   children: [
-                    //     Text("Already have an account? "),
-                    //     InkWell(child: Text("Log in")),
 
-                    //   ],
-                    //  ),
+                    //link under button move to Sign in page
+                     const Center(
+                      child: HyperlinkTempl(
+                          textBefore: "Already have an account? ",
+                          textLink: "Sign In",
+                          page: login())),
 
-                    Center(
-                      child: RichText(
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                              text: 'Already have an account? ',
-                              style: TextStyle(color: Colors.black),
-                            ),
-                            TextSpan(
-                              text: 'Sign UP ',
-                              style: TextStyle(
-                                  color: Colors.blue,
-                                  decoration: TextDecoration.underline),
-                              recognizer: TapGestureRecognizer()
-                                ..onTap = () async {
-                                  const url = 'https://your-url.com';
-                                  // if (await canLaunch(url)) {
-                                  //   await launch(url);
-                                  // } else {
-                                  //   throw 'Could not launch $url';
-                                  // }
-                                },
-                            ),
-                          ],
-                        ),
-                      ),
-                    )
+                   
                   ],
                 ),
               ),

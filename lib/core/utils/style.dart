@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:shaghaf_room/feature/onboarding/presentation/view/onboardingScreen1.dart';
 
 abstract class Styles{
+  static var comfortaa12 = GoogleFonts.comfortaa(fontSize: 14.sp);
   static var comfortaa14 = GoogleFonts.comfortaa(fontSize: 14.sp);
   static var comfortaa16 = GoogleFonts.comfortaa(fontSize: 16.sp);
   static var comfortaa16Bold = GoogleFonts.comfortaa(fontSize: 16.sp,fontWeight: FontWeight.bold);
