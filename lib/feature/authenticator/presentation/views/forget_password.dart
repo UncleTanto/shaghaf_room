@@ -3,6 +3,7 @@ import 'package:shaghaf_room/core/utils/constants.dart';
 import 'package:shaghaf_room/core/utils/style.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/ButtonTempl.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/textFormTempl.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
@@ -13,15 +14,17 @@ class ForgetPassword extends StatelessWidget {
         child: Scaffold(
       body: Column(
         children: [
-          const Padding(
-            padding: EdgeInsets.only(
-                top: 76, left: 125, right: 125, bottom: 32.75),
-            child: Image(height: 235.25, width: 140, image: AssetImage(logo)),
-          ), //عملت  padding بدل  SizedBox ووفرت مساحه
+           Padding(
+              padding: EdgeInsets.only(
+                  top: 76.h, left: 125.w, right: 125.w, bottom: 32.h),
+              child:
+                  Image(height: 235.h, width: 140.w, image: AssetImage(logo)),
+            ), //عملت  padding بدل  SizedBox ووفرت مساحه
 
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: Container(
+              width: 342.w,
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                   color: Color(0xFFFCE9BD)),

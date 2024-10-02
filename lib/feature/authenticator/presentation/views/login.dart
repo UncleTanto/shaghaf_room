@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shaghaf_room/core/utils/constants.dart';
 import 'package:shaghaf_room/core/utils/style.dart';
+import 'package:shaghaf_room/feature/authenticator/presentation/views/forget_password.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/register.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/ButtonTempl.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/hyperlinkTempl.dart';
@@ -17,13 +18,12 @@ class login extends StatelessWidget {
         //backgroundColor: Colors.white,
         body: Column(
           children: [
-                Padding(
-              padding:
-                  EdgeInsets.only(top: 76.h, left: 125.w, right: 125.w, bottom: 32.h),
-              child: Image(height: 235.h, width: 140.w, image: AssetImage(logo)),
+            Padding(
+              padding: EdgeInsets.only(
+                  top: 76.h, left: 125.w, right: 125.w, bottom: 32.h),
+              child:
+                  Image(height: 235.h, width: 140.w, image: AssetImage(logo)),
             ),
-            
-            
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Container(
@@ -47,11 +47,11 @@ class login extends StatelessWidget {
                       iconInside: Icons.phone,
                       showPassword: false,
                     ),
-      
+
                     const SizedBox(
                       height: 10,
                     ),
-      
+
                     Text(
                       "Password",
                       style: Styles.comfortaa16Bold,
@@ -65,15 +65,31 @@ class login extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        InkWell(
-                          onTap: () {},
-                          child: Text(
-                            "Forget Password ?",
+                        MouseRegion(
+                          cursor:
+                              SystemMouseCursors.click, // Hand pointer on hover
+                          child: InkWell(
+                            onTap: () {
+                              // Navigate to SecondPage on tap
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ForgetPassword()),
+                              );
+                            },
+                            child: Text(
+                              'Forget Password?',
+                              style: TextStyle(
+                                color: Colors.black,
+                                decoration: TextDecoration
+                                    .underline, // Make it look like a hyperlink
+                              ),
+                            ),
                           ),
-                        )
+                        ),
                       ],
                     ),
-      
+
                     const SizedBox(
                       height: 12,
                     ),
@@ -83,13 +99,13 @@ class login extends StatelessWidget {
                     const SizedBox(
                       height: 6,
                     ),
-      
-                   const Center(
+
+                    const Center(
                         child: HyperlinkTempl(
                             textBefore: "Don’t have an account? ",
                             textLink: "Sign UP",
                             page: Register())),
-      
+
                     const SizedBox(height: 29)
                   ],
                 ),

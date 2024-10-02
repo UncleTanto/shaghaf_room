@@ -24,7 +24,7 @@ class RoundButtonWithIcon extends StatelessWidget {
       ),
       child: Icon(
         icon,
-        size: 20.sp,
+        size: 50.sp,
         color: Colors.white, // Adjust the icon color as needed
       ),
     );

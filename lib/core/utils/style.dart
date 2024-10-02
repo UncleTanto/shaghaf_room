@@ -4,7 +4,6 @@ import 'dart:ui';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shaghaf_room/feature/onboarding/presentation/view/onboardingScreen1.dart';
 
 abstract class Styles{
   static var comfortaa12 = GoogleFonts.comfortaa(fontSize: 14.sp);
