@@ -58,7 +58,7 @@ class ForgetPassword extends StatelessWidget {
                   const TextFormTempl(
                     textInside: "Enter your Phone Number",
                     iconInside: Icons.phone,
-                    showPassword: true,
+                    showPassword: false,
                   ),
                   const SizedBox(
                     height: 24,
