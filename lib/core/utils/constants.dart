@@ -13,4 +13,8 @@ const logo = "lib/core/assets/logo_shagaf.png";
 const ongoing1 = "lib/core/assets/ongoingScreen1.png";
 const ongoing2 = "lib/core/assets/ongoingScreen2.png";
 const ongoing3 = "lib/core/assets/ongoingScreen3.png";
+const testimagehome = "lib/core/assets/img_2.png";
+const testimagehome2 = "lib/core/assets/img_1.png";
+
+
 
