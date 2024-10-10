@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:shaghaf_room/core/utils/app_router.dart';
 import 'package:shaghaf_room/core/utils/style.dart';
 
 class ButtonTempl extends StatelessWidget {
-  const ButtonTempl({super.key, required this.text});
+  const ButtonTempl({super.key, required this.text, required this.page});
 
   final String text;
+  final String page;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -13,6 +16,7 @@ class ButtonTempl extends StatelessWidget {
         width: double.infinity,
         child: ElevatedButton(
           onPressed: () {
+            context.push(page);
             //print('Rounded Elevated Button Pressed');
           },
           style: ElevatedButton.styleFrom(

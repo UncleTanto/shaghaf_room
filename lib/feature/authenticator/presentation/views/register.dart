@@ -93,7 +93,7 @@ class Register extends StatelessWidget {
                       height: 5,
                     ),
                     //instead of sized box I have added padding inside button
-                    const ButtonTempl(text: "Sign UP"),
+                    const ButtonTempl(text: "Sign UP",page: "/home",),//todo change it
 
                     //link under button move to Sign in page
                      const Center(

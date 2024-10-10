@@ -64,6 +64,7 @@ class ForgetPassword extends StatelessWidget {
                     height: 24,
                   ),
                   const ButtonTempl(
+                    page: "/home",//todo change it
                     text: "Reset Password",
                   ),
                   const SizedBox(

@@ -94,6 +94,7 @@ class login extends StatelessWidget {
                       height: 12,
                     ),
                     const ButtonTempl(
+                      page: "/home",
                       text: "LOGIN",
                     ),
                     const SizedBox(
