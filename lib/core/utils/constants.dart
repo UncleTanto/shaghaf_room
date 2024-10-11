@@ -15,6 +15,7 @@ const ongoing2 = "lib/core/assets/ongoingScreen2.png";
 const ongoing3 = "lib/core/assets/ongoingScreen3.png";
 const testimagehome = "lib/core/assets/img_2.png";
 const testimagehome2 = "lib/core/assets/img_1.png";
+const test= "lib/core/assets/img_3.png";
 
 
 

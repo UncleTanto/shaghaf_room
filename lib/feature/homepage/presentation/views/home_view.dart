@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:animated_button_bar/animated_button_bar.dart';
-import 'package:shaghaf_room/feature/book_page/presentation/views/book_view.dart';
+import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shaghaf_room/core/utils/constants.dart';
 import 'package:shaghaf_room/feature/homepage/presentation/views/home_body.dart';
 import 'package:shaghaf_room/feature/more_page/presentation/views/more_view.dart';
 import 'package:shaghaf_room/feature/offers_page/presentation/views/offers_view.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:shaghaf_room/feature/room_page/presentation/views/RoomView.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -13,66 +16,76 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  // حالة لتحديد الصفحة المعروضة حاليًا
-  Widget _currentPage = const HomeBody();
+  var _bottomNavIndex = 0; // Default index of the first screen
 
-  void _updatePage(Widget page) {
-    setState(() {
-      _currentPage = page;
-    });
-  }
+  final iconList = <IconData>[
+    Icons.home, // Icon for Home page
+    Icons.book, // Icon for Book page
+    Icons.local_offer, // Icon for Offers page
+    Icons.more_horiz, // Icon for More page
+  ];
+
+  final textList = <String>[
+    'Home',
+    'Book',
+    'Offers',
+    'More',
+  ];
+
+// List of pages to navigate between
+  final List<Widget> _pages = [
+    HomeBody(), // صفحة Home
+    RoomView(), // صفحة Book
+    OffersView(), // صفحة Offers
+    MoreView(), // صفحة More
+  ];
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
-          children: [
-            Expanded(
-              child: _currentPage, // يعرض الصفحة الحالية
-            ),
-            AnimatedButtonBar(
-              backgroundColor: Colors.white,
-              foregroundColor: const Color(0xff20473E),
-              radius: 8.0,
-              padding: const EdgeInsets.all(16.0),
-              invertedSelection: true,
+        body: _pages[_bottomNavIndex],
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+          },
+          child: Image(height: 40.h, width: 28.w, image: AssetImage(logo)),
+          backgroundColor: Colors.grey,
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        bottomNavigationBar: AnimatedBottomNavigationBar.builder(
+          itemCount: iconList.length,
+          tabBuilder: (int index, bool isActive) {
+            final color = isActive ? kPrimaryGreen : Colors.grey;
+            return Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ButtonBarEntry(
-                  onTap: () => _updatePage(const HomeBody()), // تغيير الصفحة إلى HomeBody
-                  child: Column(children: const [
-                    Icon(Icons.home_filled),
-                    Text('Home'),
-                  ]),
+                Icon(
+                  iconList[index],
+                  size: 20,
+                  color: color,
                 ),
-                ButtonBarEntry(
-                  onTap: () => _updatePage(const BookView()), // تغيير الصفحة إلى BookView
-                  child: Column(children: const [
-                    Icon(Icons.book),
-                    Text('Book'),
-                  ]),
-                ),
-                ButtonBarEntry(
-                  onTap: () => _updatePage(const OffersView()), // تغيير الصفحة إلى OffersView
-                  child: Column(
-                    children: const [
-                      Icon(Icons.local_offer),
-                      Text('Offers'),
-                    ],
-                  ),
-                ),
-                ButtonBarEntry(
-                  onTap: () => _updatePage(const MoreView()), // تغيير الصفحة إلى MoreView
-                  child: Column(
-                    children: const [
-                      Icon(Icons.format_list_bulleted),
-                      Text('More'),
-                    ],
+                SizedBox(height: 4),
+                Text(
+                  textList[index],
+                  style: TextStyle(
+                    color: color,
+                    fontSize: 10.sp, // استخدام ScreenUtil لتكييف حجم النص
                   ),
                 ),
               ],
-            ),
-          ],
+            );
+          },
+          activeIndex: _bottomNavIndex,
+          gapLocation: GapLocation.center,
+          notchSmoothness: NotchSmoothness.verySmoothEdge,
+          leftCornerRadius: 32,
+          rightCornerRadius: 32,
+          onTap: (index) {
+            setState(() {
+              _bottomNavIndex = index; // تحديث الـindex عند الضغط على الأيقونة
+            });
+          },
         ),
       ),
     );
