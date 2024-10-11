@@ -7,6 +7,7 @@ import '../../feature/homepage/presentation/views/home_body.dart';
 import '../../feature/homepage/presentation/views/home_view.dart';
 import '../../feature/onboarding/presentation/view/onboarding.dart';
 
+import '../../feature/room_page/presentation/views/bookingbody.dart';
 import '../../feature/splashscreen/presentation/view/splashscreen.dart';
 
 
@@ -38,7 +39,7 @@ import '../../feature/splashscreen/presentation/view/splashscreen.dart';
       ),
       GoRoute(
         path: kHome,
-        builder: (context, state) => const HomeBody(),
+        builder: (context, state) => const dateandtimeselected(),
       ),
 
     ],

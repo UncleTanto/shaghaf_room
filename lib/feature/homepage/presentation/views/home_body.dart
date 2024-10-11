@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:shaghaf_room/core/utils/constants.dart';
 import 'package:shaghaf_room/core/utils/style.dart';
-import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/ButtonTempl.dart';
+import 'package:shaghaf_room/core/widget/ButtonTempl.dart';
 import 'package:shaghaf_room/feature/homepage/presentation/views/home_view.dart';
 import 'package:shaghaf_room/feature/homepage/presentation/views/widgets/Advertisement_listview.dart';
 

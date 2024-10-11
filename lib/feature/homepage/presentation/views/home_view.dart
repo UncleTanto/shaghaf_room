@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:animated_button_bar/animated_button_bar.dart';
-import 'package:shaghaf_room/feature/book_page/presentation/views/book_view.dart';
 import 'package:shaghaf_room/feature/homepage/presentation/views/home_body.dart';
 import 'package:shaghaf_room/feature/more_page/presentation/views/more_view.dart';
 import 'package:shaghaf_room/feature/offers_page/presentation/views/offers_view.dart';
+
+import '../../../room_page/presentation/views/RoomView.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -46,7 +47,7 @@ class _HomeViewState extends State<HomeView> {
                   ]),
                 ),
                 ButtonBarEntry(
-                  onTap: () => _updatePage(const BookView()), // تغيير الصفحة إلى BookView
+                  onTap: () => _updatePage(const RoomView()), // تغيير الصفحة إلى BookView
                   child: Column(children: const [
                     Icon(Icons.book),
                     Text('Book'),

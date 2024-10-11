@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shaghaf_room/core/utils/constants.dart';
 import 'package:shaghaf_room/core/utils/style.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/login.dart';
-import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/ButtonTempl.dart';
+import 'package:shaghaf_room/core/widget/ButtonTempl.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/hyperlinkTempl.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/textFormTempl.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
