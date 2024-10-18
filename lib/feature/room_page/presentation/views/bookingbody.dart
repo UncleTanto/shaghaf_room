@@ -4,10 +4,7 @@ import 'package:shaghaf_room/core/utils/style.dart';
 import 'package:shaghaf_room/core/widget/ButtonTempl.dart';
 import 'package:shaghaf_room/core/widget/smallButton.dart';
 import 'package:shaghaf_room/feature/room_page/presentation/views/widget/calenderwidget.dart';
-import 'package:shaghaf_room/feature/room_page/presentation/views/widget/pmam.dart';
-import 'package:shaghaf_room/feature/room_page/presentation/views/widget/timeScrolitem.dart';
 import 'package:shaghaf_room/feature/room_page/presentation/views/widget/timewidget.dart';
-import 'package:table_calendar/table_calendar.dart';
 
 class dateandtimeselected extends StatefulWidget {
   const dateandtimeselected({super.key});
@@ -18,20 +15,22 @@ class dateandtimeselected extends StatefulWidget {
 
 class _dateandtimeselectedState extends State<dateandtimeselected> {
   @override
-  DateTime today=DateTime.now();
-
+  DateTime today = DateTime.now();
 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Select date and time",style: Styles.comfortaa16 ,),
-      centerTitle: true,
+        title: Text(
+          "Select date and time",
+          style: Styles.comfortaa16,
+        ),
+        centerTitle: true,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Calenderwidget(),
-          mytime(),
+          const Calenderwidget(),
+          const mytime(),
           Container(
             width: 390.w,
             height: 60.h,
@@ -52,24 +51,44 @@ class _dateandtimeselectedState extends State<dateandtimeselected> {
               children: [
                 Row(
                   children: [
-                    Icon(Icons.person_pin),
-                    Text("Number of seats",style: Styles.comfortaa16,),
+                    const Icon(Icons.person_pin),
+                    Text(
+                      "Number of seats",
+                      style: Styles.comfortaa16,
+                    ),
                   ],
                 ),
                 Row(
                   children: [
-                    Smallbutton( text: "+", swidth: 24, sheight: 24,),
-                    SizedBox(width: 20.w,),
-                    Text("0",style: Styles.comfortaa16,),
-                    SizedBox(width: 20.w,),
-                    Smallbutton( text: "-",swidth: 24, sheight: 24,),
+                    const Smallbutton(
+                      text: "+",
+                      swidth: 24,
+                      sheight: 24,
+                    ),
+                    SizedBox(
+                      width: 20.w,
+                    ),
+                    Text(
+                      "0",
+                      style: Styles.comfortaa16,
+                    ),
+                    SizedBox(
+                      width: 20.w,
+                    ),
+                    const Smallbutton(
+                      text: "-",
+                      swidth: 24,
+                      sheight: 24,
+                    ),
                   ],
                 )
               ],
             ),
           ),
-          ButtonTempl(text: "loading", page: '/home')
-
+          const ButtonTempl(
+            text: "loading",
+            page: '/home',
+          )
         ],
       ),
     );

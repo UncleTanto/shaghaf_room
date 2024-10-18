@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:shaghaf_room/feature/onboarding/presentation/view/widget/onboardingitem.dart';
 import 'package:shaghaf_room/feature/onboarding/presentation/view/widget/ongoingbottomsheet.dart';
 import 'package:shaghaf_room/feature/onboarding/presentation/view/widget/ongoingpagebuilder.dart';
-import 'package:shaghaf_room/feature/onboarding/presentation/view/widget/roundbutton.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../../core/utils/constants.dart';
 import '../../../../core/utils/style.dart';

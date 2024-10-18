@@ -26,19 +26,19 @@ class CategoriesItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                     Center(
+                    const Center(
                        child: Text(
                         'Rooms',
                         style: TextStyle(fontSize: 24, color: kPrimaryWhite),
                                            ),
                      ),
 
-                  SizedBox(width: 56),
+                  const SizedBox(width: 56),
                   Center(
                     child: Image(
                       height: 150.h,
                       width: 150.w,
-                      image: AssetImage(ongoing2),
+                       image: const AssetImage(ongoing2),
                     ),
                   ),
 
@@ -65,7 +65,7 @@ class CategoriesItem extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Center(
+                     const Center(
                         child: Text(
                           'Orders',
                           style: TextStyle(fontSize: 20, color: kPrimaryWhite),
@@ -77,13 +77,13 @@ class CategoriesItem extends StatelessWidget {
                         width: 120.w,
                         image: AssetImage(test),
                       ),
-                      SizedBox(width: 36),
+                      const SizedBox(width: 36),
                     ],
                   ),
                 ),
               ),
             ),
-            SizedBox(width: 20),
+            const SizedBox(width: 20),
             ClipPath(
               clipper: RoundedCornerClipper3(),
               child: InkWell(
@@ -99,19 +99,19 @@ class CategoriesItem extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Center(
+                     const Center(
                         child: Text(
                           'Events',
                           style: TextStyle(fontSize: 20, color: kPrimaryWhite),
                         ),
                       ),
-                      SizedBox(height: 4),
+                      const SizedBox(height: 4),
                       Image(
                         height: 120.h,
                         width: 120.w,
-                        image: AssetImage(ongoing3),
+                        image: const AssetImage(ongoing3),
                       ),
-                      SizedBox(width: 36),
+                      const  SizedBox(width: 36),
                     ],
                   ),
                 ),

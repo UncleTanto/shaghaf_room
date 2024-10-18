@@ -10,7 +10,7 @@ class ContactUsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        title: Row(
+        title: const Row(
           children: [
             SizedBox(width: 113,),
             Text('Contact Us',style: TextStyle(color: Colors.black),),
@@ -18,7 +18,7 @@ class ContactUsView extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
+      body: const Column(
         children: [
           ContactUsWidget(titel: '01012494416', icon: Icons.local_phone_outlined,kcoloer: Color(
               0xff2ecdc0) ),

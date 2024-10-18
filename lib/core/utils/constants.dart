@@ -15,13 +15,6 @@ const ongoing2 = "lib/core/assets/ongoingScreen2.png";
 const ongoing3 = "lib/core/assets/ongoingScreen3.png";
 const testimagehome = "lib/core/assets/img_2.png";
 const testimagehome2 = "lib/core/assets/img_1.png";
-const test= "lib/core/assets/img_3.png";
-const testimagehome3 = "lib/core/assets/img_1.png";
-const testimage5 = "lib/core/assets/img_5.png";
-const testimage6 = "lib/core/assets/img_6.png";
-const testimage7 = "lib/core/assets/img_7.png";
-
-
-
-
-
+const testimagehome3 = "lib/core/assets/img3.png";
+const test = "lib/core/assets/img_3.png";
+const offers_contaniarimg = "lib/core/assets/offers_contaniarimg.png";

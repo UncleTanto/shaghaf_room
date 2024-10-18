@@ -18,10 +18,10 @@ class ForgetDialog extends StatelessWidget {
               width: 200,
               height: 200,
             ),
-            SizedBox(height: 12,),
-            Text("Success",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-            SizedBox(height: 12,),
-            Text("You have successfully reset your password.",style: TextStyle(fontSize: 16),),
+            const SizedBox(height: 12,),
+            const Text("Success",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+            const SizedBox(height: 12,),
+            const Text("You have successfully reset your password.",style: TextStyle(fontSize: 16),),
           ],
         ),
       ),
@@ -32,6 +32,6 @@ class ForgetDialog extends StatelessWidget {
       ],
 
 
-    );;
+    );
   }
 }

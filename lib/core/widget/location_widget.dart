@@ -16,7 +16,7 @@ class LocationWidget extends StatelessWidget {
           color: kPrimaryOrange,
           borderRadius: BorderRadius.circular(12),
         ),
-        child: Row(
+        child:const Row(
           children: [
             Icon(
               Icons.location_on_outlined,color:Colors.white ,),

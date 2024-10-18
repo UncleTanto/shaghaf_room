@@ -9,7 +9,8 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        title: Row(
+        title: const
+         Row(
           children: [
             SizedBox(width: 115,),
             Text('Profile',style: TextStyle(color: Colors.black),),

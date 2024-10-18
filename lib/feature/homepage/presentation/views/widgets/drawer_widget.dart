@@ -12,11 +12,11 @@ class DrawerWidget extends StatelessWidget {
         Image(height: 235.h, width: 140.w, image: AssetImage(logo)),
 
         const SizedBox(height: 20),
-        ListTile(
+        const ListTile(
           leading: Icon(Icons.person_outline_outlined, color: Color(0xffF04C29),size: 22,),
           title: Text('Profile'),
         ),
-        ListTile(
+        const ListTile(
           leading: Icon(Icons.language, color: Color(0xffF04C29),size: 22,),
           title: Row(
             children: [
@@ -25,19 +25,19 @@ class DrawerWidget extends StatelessWidget {
             ],
           ),
         ),
-        ListTile(
+        const ListTile(
           leading: Icon(Icons.shopping_cart, color: Color(0xffF04C29),size: 22,),
           title: Text('Orders'),
         ),
-        ListTile(
+        const ListTile(
           leading: Icon(Icons.notifications, color:Color(0xffF04C29),size: 22,),
           title: Text('Notification'),
         ),
-        ListTile(
+        const ListTile(
           leading: Icon(Icons.star, color: Color(0xffF04C29),size: 22,),
           title: Text('Rating'),
         ),
-        ListTile(
+        const ListTile(
           leading: Icon(Icons.contact_mail, color: Color(0xffF04C29),size: 22,),
           title: Text('Contact Us'),
         ),

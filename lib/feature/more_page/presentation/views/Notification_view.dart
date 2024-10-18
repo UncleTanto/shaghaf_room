@@ -13,7 +13,7 @@ class NotificationView extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        title: Row(
+        title: const Row(
           children: [
             SizedBox(width: 113,),
             Text('Notification',style: TextStyle(color: Colors.black),),
@@ -22,7 +22,7 @@ class NotificationView extends StatelessWidget {
         ),
       ),
       body:  ListView.builder(itemBuilder: (context,index){
-        return NotificationWidget(titel: 'Ceramics workshop Event', day: 'today', time: '12:05 pm', image: testimagehome3,);
+        return const NotificationWidget(titel: 'Ceramics workshop Event', day: 'today', time: '12:05 pm', image: testimagehome3,);
       },
         itemCount: 5,),
     );

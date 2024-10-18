@@ -1,10 +1,9 @@
-import'package:flutter/material.dart';
-import 'package:shaghaf_room/core/widget/notificationbell_widget.dart';
+import 'package:flutter/material.dart';
 import 'package:shaghaf_room/feature/more_page/presentation/views/Notification_view.dart';
 import 'package:shaghaf_room/feature/more_page/presentation/views/contact_us_view.dart';
-import 'package:shaghaf_room/feature/more_page/presentation/views/order_view.dart';
 import 'package:shaghaf_room/feature/more_page/presentation/views/profile_view.dart';
 import 'package:shaghaf_room/feature/more_page/presentation/views/widgets/setting_widget.dart';
+
 class SettingView extends StatelessWidget {
   const SettingView({super.key});
 
@@ -12,13 +11,15 @@ class SettingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(
+        title: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-             Icon(Icons.notifications_active, color: Colors.black, size: 24),
-            Text('Settings',style: TextStyle(color: Colors.black),),
+            Icon(Icons.notifications_active, color: Colors.black, size: 24),
+            Text(
+              'Settings',
+              style: TextStyle(color: Colors.black),
+            ),
             Icon(Icons.filter_list_sharp, color: Colors.black, size: 24),
-
           ],
         ),
       ),
@@ -29,13 +30,21 @@ class SettingView extends StatelessWidget {
             icon: Icons.person_outline_outlined,
             screen: ProfileView(),
           ),
-          ListTile(
-            leading: Icon(Icons.language, color: Color(0xffF04C29),size: 16,),
+          const ListTile(
+            leading: Icon(
+              Icons.language,
+              color: Color(0xffF04C29),
+              size: 16,
+            ),
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('English'),
-                Icon(Icons.arrow_drop_down, color: Color(0xffF04C29),size: 16,),
+                Icon(
+                  Icons.arrow_drop_down,
+                  color: Color(0xffF04C29),
+                  size: 16,
+                ),
               ],
             ),
           ),
@@ -55,7 +64,7 @@ class SettingView extends StatelessWidget {
           SettingWidget(
             text: 'About Us',
             icon: Icons.message,
-            screen: OrdersView(),
+            screen: ContactUsView(),
           ),
           SettingWidget(
             text: 'Contact Us',

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shaghaf_room/feature/authenticator/presentation/views/register.dart';
 class HyperlinkTempl extends StatelessWidget {
   const HyperlinkTempl({super.key , required this.textBefore, required this.textLink,  required this.page});
 

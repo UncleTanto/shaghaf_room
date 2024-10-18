@@ -11,18 +11,16 @@ class ButtonTempl extends StatelessWidget {
   final String page;
   @override
   Widget build(BuildContext context) {
-    return
-      InkWell(
-        onTap: (){},
-        child: Padding(
+    return InkWell(
+      onTap: () {},
+      child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10),
         child: SizedBox(
           width: double.infinity,
           height: 52.h,
           child: ElevatedButton(
-
             onPressed: () {
-              context.push(page);
+              GoRouter.of(context).push(AppRouter.kHomepage);
               //print('Rounded Elevated Button Pressed');
             },
             style: ElevatedButton.styleFrom(
@@ -32,10 +30,13 @@ class ButtonTempl extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
-            child: Text(text,style: Styles.comfortaa12,),
+            child: Text(
+              text,
+              style: Styles.comfortaa12,
+            ),
           ),
         ),
-            ),
-      );
+      ),
+    );
   }
 }

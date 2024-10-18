@@ -18,7 +18,7 @@ class RowViewWidget extends StatelessWidget {
               color: kPrimaryOrange,
               borderRadius: BorderRadius.circular(12),
             ),
-            child: Text(
+            child: const Text(
               'Membership',
               style: TextStyle(color: Colors.white),
             ),
@@ -36,7 +36,7 @@ class RowViewWidget extends StatelessWidget {
                 color: kPrimaryOrange,
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Text(
+              child: const Text(
                 'Birthday',
                 style: TextStyle(color: Colors.white),
               ),
@@ -53,7 +53,7 @@ class RowViewWidget extends StatelessWidget {
               color: kPrimaryOrange,
               borderRadius: BorderRadius.circular(12),
             ),
-            child: Text(
+            child: const Text(
               'Photo session',
               style: TextStyle(color: Colors.white),
             ),

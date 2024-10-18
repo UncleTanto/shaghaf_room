@@ -12,13 +12,11 @@ class AdvertisementItem extends StatelessWidget {
           width: 243,
           height: 108,
           decoration: BoxDecoration(
-              color: Color(0xff20473E),
-              image: DecorationImage(image: AssetImage(testimagehome2)),
-              borderRadius: BorderRadius.circular(12)
-          ),
-          child: Image( fit: BoxFit.fill,
-              image: AssetImage(testimagehome2))
-      ),
+              color: const Color(0xff20473E),
+              image: const DecorationImage(image: AssetImage(testimagehome2)),
+              borderRadius: BorderRadius.circular(12)),
+          child:
+              const Image(fit: BoxFit.fill, image: AssetImage(testimagehome2))),
     );
   }
 }

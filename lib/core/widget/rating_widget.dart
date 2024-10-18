@@ -16,7 +16,7 @@ double rati=4.7;
             ),
             child: Row(
               children: [
-                Icon(
+                const Icon(
                   Icons.star,color:Colors.yellow ,),
                 Text(
                   '$rati',

@@ -3,10 +3,12 @@ import 'package:shaghaf_room/core/utils/constants.dart';
 import 'package:shaghaf_room/core/utils/style.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/forget_password.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/register.dart';
-import 'package:shaghaf_room/core/widget/ButtonTempl.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/hyperlinkTempl.dart';
 import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/textFormTempl.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shaghaf_room/feature/homepage/presentation/views/home_view.dart';
+
+import '../../../../core/widget/ButtonTempl.dart';
 
 class login extends StatelessWidget {
   const login({super.key});
@@ -77,7 +79,7 @@ class login extends StatelessWidget {
                                     builder: (context) => ForgetPassword()),
                               );
                             },
-                            child: Text(
+                            child: const Text(
                               'Forget Password?',
                               style: TextStyle(
                                 color: Colors.black,
@@ -94,8 +96,8 @@ class login extends StatelessWidget {
                       height: 12,
                     ),
                     const ButtonTempl(
-                      page: "/home",
                       text: "LOGIN",
+                      page: '',
                     ),
                     const SizedBox(
                       height: 6,

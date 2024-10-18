@@ -7,7 +7,6 @@ import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/hy
 import 'package:shaghaf_room/feature/authenticator/presentation/views/widgets/textFormTempl.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 //this class is still under implementation
 // I just added some code and one widget textFormImpli
 class Register extends StatelessWidget {
@@ -19,13 +18,12 @@ class Register extends StatelessWidget {
       child: Scaffold(
         body: Column(
           children: [
-            
-               Padding(
-            padding:
-                EdgeInsets.only(top: 76.h, left: 125.w, right: 125.w, bottom: 32.h),
-            child: Image(height: 235.h, width: 140.w, image: AssetImage(logo)),
-          ),
-          
+            Padding(
+              padding: EdgeInsets.only(
+                  top: 76.h, left: 125.w, right: 125.w, bottom: 32.h),
+              child:
+                  Image(height: 235.h, width: 140.w, image: AssetImage(logo)),
+            ),
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
@@ -89,20 +87,20 @@ class Register extends StatelessWidget {
                         iconInside: Icons.lock_outline_rounded,
                         showPassword: true),
 
-                      const SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     //instead of sized box I have added padding inside button
-                    const ButtonTempl(text: "Sign UP",page: "/home",),//todo change it
+                    const ButtonTempl(
+                      text: "Sign UP", page: '/home',
+                    ), //todo change it
 
                     //link under button move to Sign in page
-                     const Center(
-                      child: HyperlinkTempl(
-                          textBefore: "Already have an account? ",
-                          textLink: "Sign In",
-                          page: login())),
-
-                   
+                    const Center(
+                        child: HyperlinkTempl(
+                            textBefore: "Already have an account? ",
+                            textLink: "Sign In",
+                            page: login())),
                   ],
                 ),
               ),
